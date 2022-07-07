@@ -1,0 +1,25 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  namespace: prod
+  name: exmpleProd-role
+
+rules:
+  - apiGroups: ["*"]
+    resources: ["*"] # services,pods,secrets,vb objeler
+    verbs: ["get", "list", "watch"]
+
+---
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: exmpleRoleProd-rolebinding
+  namespace: prod
+subjects:
+  - kind: User
+    name: juniorGroup
+    apiGroup: rbac.authorization.k8s.io
+roleRef:
+  kind: Role
+  name: exmpleProd-role
+  apiGroup: rbac.authorization.k8s.io
