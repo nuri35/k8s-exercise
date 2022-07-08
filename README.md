@@ -18,7 +18,7 @@
 - Her iki uygulamanın da uzun dönem verilerini "persistent volume"ler üzerinde saklanacak.
 - Her iki uygulamanın da hiç bir hassas bilgisi "ör: şifre" uygulama ya da yaml dosyaları içerisinde tutulmayacak.
 - Her iki uygulama da aynı worker node üstünde schedule edilecek.
-- Her iki uygulama için de cpu ve memory kaynak kısıtları tanımlı olacak.
+
 
 **7:** "test" namespace'inde deploy edilen wordpress uygulaması "testblog.example.com", "production" namespace'inde deploy edilen wordpress uygulaması "companyblog.example.com" olarak ingress üstünden dış dünyaya expose edilecek.
 
